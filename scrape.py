@@ -6,18 +6,20 @@ res = requests.get('https://news.ycombinator.com/news')
 
 soup = BeautifulSoup(res.text, 'html.parser')
 links = soup.select('.storylink')
-votes = soup.select('.score')
+subtext = soup.select('.subtext')
 
-def create_custom_hn(links, votes):
+def create_custom_hn(links, subtext):
     hn = []
 
     for i, item in enumerate(links):
-        title = links[i].getText()
-        href = links[i].get('href', None)
-        vote = int(votes[i].getText().replace(' points', ''))
-        hn.append({'title': title, 'link': href})
-        
+        title = item.getText()
+        href = item.get('href', None)
+        vote = subtext[i].select('.score')
 
+        if len(vote):
+            votes = int(vote[0].getText().replace(' points', ''))
+            hn.append({'title': title, 'link': href, 'votes': votes})
+        
     return hn
 
-print(create_custom_hn(links, votes))
+create_custom_hn(links, subtext)
