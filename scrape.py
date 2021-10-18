@@ -7,9 +7,9 @@ res2 = requests.get('https://news.ycombinator.com/news?p=2')
 
 soup = BeautifulSoup(res.text, 'html.parser')
 soup2 = BeautifulSoup(res2.text, 'html.parser')
-links = soup.select('.storylink')
+links = soup.select('.titlelink')
 subtext = soup.select('.subtext')
-links2 = soup2.select('.storylink')
+links2 = soup2.select('.titlelink')
 subtext2 = soup2.select('.subtext')
 
 mega_links = links + links2
