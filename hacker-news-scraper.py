@@ -41,4 +41,4 @@ def create_custom_hn(links, subtext):
     return sort_stories_by_votes(hn)
 
 # Print the output
-pprint.pprint(create_custom_hn(mega_links, mega_subtext))
+print(create_custom_hn(mega_links, mega_subtext))
