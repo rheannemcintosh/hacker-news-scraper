@@ -4,9 +4,7 @@
 This application scrapes the first ten pages of the [Hacker News](https://news.ycombinator.com/news) site, and returns a list of URLs to visit which have had more than 100 upvotes. This is developed using Python, and makes use of Beautiful Soup. 
 
 ### Inspiration
-The original application was inspired by a tutorial within the [Zero to Mastery: Complete Python Developer in 2022]() course. This has now been expanded to get data from 10 pages, and aims to save this information to a data frame and create a new csv.
-
-Section 18: Scraping Data with Python
+The original application was inspired by a tutorial within the [Zero to Mastery: Complete Python Developer in 2022](https://www.udemy.com/course/complete-python-developer-zero-to-mastery) course. <!-- This has now been expanded to get data from 10 pages, and aims to save this information to a data frame and create a new csv. -->
 
 ## Repository Checklist
 - [ ] Upload Code
@@ -25,7 +23,7 @@ Section 18: Scraping Data with Python
 ## Notes
 - **Language:** Python
 - **Tags:** Pandas, BeautifulSoup, Scraper
-- **Tutorial:** Zero to Mastery: Complete Python Developer in 2022 (Section 18: Web Scraping in Python)
+- **Tutorial:** [Zero to Mastery: Complete Python Developer in 2022 (Section 18: Scraping Data with Python)](https://www.udemy.com/course/complete-python-developer-zero-to-mastery)
 - **Author:** Rheanne McIntosh
 
 ## Application Setup / Commands
