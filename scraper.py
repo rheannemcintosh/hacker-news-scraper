@@ -3,22 +3,7 @@ import requests
 from bs4 import BeautifulSoup
 import pprint
 
-# Get the Requests from the URLs
-res = requests.get('https://news.ycombinator.com/news')
-res2 = requests.get('https://news.ycombinator.com/news?p=2')
-
-# Parse the requests (links and subtext)
-soup = BeautifulSoup(res.text, 'html.parser')
-soup2 = BeautifulSoup(res2.text, 'html.parser')
-links = soup.select('.titlelink')
-subtext = soup.select('.subtext')
-links2 = soup2.select('.titlelink')
-subtext2 = soup2.select('.subtext')
-
-# Get all the links and subtext
-mega_links = links + links2
-mega_subtext = subtext + subtext2
-
+hn = []
 
 # Sort stories by votes function
 def sort_stories_by_votes(hnlist):
@@ -27,7 +12,6 @@ def sort_stories_by_votes(hnlist):
 
 # Get relevant stories from hacker news
 def create_custom_hn(links, subtext):
-    hn = []
     for i, item in enumerate(links):
         title = item.getText()
         href = item.get('href', None)
@@ -38,7 +22,16 @@ def create_custom_hn(links, subtext):
             if votes > 99:
                 hn.append({'title': title, 'link': href, 'votes': votes})
 
-    return sort_stories_by_votes(hn)
+    return hn
+
+for i in range(1, 11):
+    url = 'https://news.ycombinator.com/news?p=' + str(i)
+    request = requests.get(url)
+    soup = BeautifulSoup(request.text, 'html.parser')
+    links = soup.select('.titlelink')
+    subtext = soup.select('.subtext')
+
+    create_custom_hn(links, subtext)
 
 # Print the output
-print(create_custom_hn(mega_links, mega_subtext))
+print(sort_stories_by_votes(hn))
