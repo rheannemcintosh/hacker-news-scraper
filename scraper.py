@@ -1,8 +1,9 @@
 # Import Statements
 import requests
 from bs4 import BeautifulSoup
-import pprint
+import pandas as pd
 
+# Declare the empty list
 hn = []
 
 # Sort stories by votes function
@@ -33,5 +34,9 @@ for i in range(1, 11):
 
     create_custom_hn(links, subtext)
 
+# Create the Data Frame
+df = pd.DataFrame.from_dict(sort_stories_by_votes(hn))
+df.columns= df.columns.str.capitalize()
+
 # Print the output
-print(sort_stories_by_votes(hn))
+print(df)
