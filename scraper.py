@@ -2,6 +2,7 @@
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
+from datetime import datetime
 
 # Declare the empty list
 hn = []
@@ -38,5 +39,6 @@ for i in range(1, 11):
 df = pd.DataFrame.from_dict(sort_stories_by_votes(hn))
 df.columns= df.columns.str.capitalize()
 
-# Print the output
-print(df)
+# Save the output to a CSV
+csv_string = 'news_csvs/news_list_' + datetime.now().strftime("%Y_%m_%d_%H-%M-%S") + '.csv'
+df.to_csv(csv_string)
