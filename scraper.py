@@ -1,15 +1,8 @@
 # Import Statements
-import requests
 from bs4 import BeautifulSoup
-import pandas as pd
 from datetime import datetime
-
-# Declare the empty list
-hn = []
-
-# Sort stories by votes function
-def sort_stories_by_votes(hnlist):
-    return sorted(hnlist, key=lambda k: k['votes'], reverse=True)
+import pandas as pd
+import requests
 
 
 # Get relevant stories from hacker news
@@ -26,6 +19,16 @@ def create_custom_hn(links, subtext):
 
     return hn
 
+
+# Sort stories by votes function
+def sort_stories_by_votes(hnlist):
+    return sorted(hnlist, key=lambda k: k['votes'], reverse=True)
+
+
+# Declare the empty list
+hn = []
+
+# Loop through the first 10 pages of Hacker News
 for i in range(1, 11):
     url = 'https://news.ycombinator.com/news?p=' + str(i)
     request = requests.get(url)
@@ -37,8 +40,12 @@ for i in range(1, 11):
 
 # Create the Data Frame
 df = pd.DataFrame.from_dict(sort_stories_by_votes(hn))
-df.columns= df.columns.str.capitalize()
+df.columns = df.columns.str.capitalize()
 
 # Save the output to a CSV
-csv_string = 'news_csvs/news_list_' + datetime.now().strftime("%Y_%m_%d_%H-%M-%S") + '.csv'
+csv_string = (
+    'news_csvs/news_list_' +
+    datetime.now().strftime("%Y_%m_%d_%H-%M-%S") +
+    '.csv'
+)
 df.to_csv(csv_string)
