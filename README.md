@@ -21,7 +21,7 @@ This has now been expanded to get data from 10 pages, saves this information to 
 - [ ] Archive Repository
 
 ## Future Ideas
-- Display this information on a web page or on my [portfolio](https://github.com/rheannemcintosh/rheanne_mcintosh_portfolio). 
+:bulb: Display this information on a web page or on my [portfolio](https://github.com/rheannemcintosh/rheanne_mcintosh_portfolio). 
 
 ## Notes
 - **Language:** Python
