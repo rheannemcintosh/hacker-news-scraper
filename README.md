@@ -25,7 +25,7 @@ This has now been expanded to get data from 10 pages, saves this information to 
 
 ## Notes
 - **Language:** Python
-- **Tags:** Pandas, BeautifulSoup, Scraper
+- **Tags:** Pandas, BeautifulSoup, Scraper, CSV
 - **Tutorial:** [Zero to Mastery: Complete Python Developer in 2022 (Section 18: Scraping Data with Python)](https://www.udemy.com/course/complete-python-developer-zero-to-mastery)
 - **Author:** Rheanne McIntosh
 
