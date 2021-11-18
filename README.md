@@ -1,24 +1,27 @@
-# Hacker News Scraper :computer:
+# Hacker News Scraper :newspaper:
 
 ## Project Overview
-This application scrapes the first ten pages of the [Hacker News](https://news.ycombinator.com/news) site, and returns a list of URLs to visit which have had more than 100 upvotes. This is developed using Python, and makes use of Beautiful Soup. 
+This application scrapes the first ten pages of the [Hacker News](https://news.ycombinator.com/news) site, and saves a list of news articles with over 100 upvotes to a data frame and creates a new csv. This is developed using Python, and makes use of Beautiful Soup and Pandas. 
 
 ### Inspiration
-The original application was inspired by a tutorial within the [Zero to Mastery: Complete Python Developer in 2022](https://www.udemy.com/course/complete-python-developer-zero-to-mastery) course. <!-- This has now been expanded to get data from 10 pages, and aims to save this information to a data frame and create a new csv. -->
+The original application was inspired by a tutorial within the [Zero to Mastery: Complete Python Developer in 2022](https://www.udemy.com/course/complete-python-developer-zero-to-mastery) course.
+
+### Customising the Application
+This has now been expanded to get data from 10 pages, saves this information to a data frame and creates a new csv.
 
 ## Repository Checklist
-- [ ] Upload Code
-- [ ] Format Code
-- [ ] Update README
-- [ ] Update Repository
-- [ ] Create Future Ideas
-- [ ] Write Application Setup / Commands
+- [x] Upload Code
+- [x] Format Code
+- [x] Update README
+- [x] Update Repository
+- [x] Create Future Ideas
+- [x] Write Application Setup / Commands
 - [ ] Uploaded to Portfolio
 - [ ] Update Wiki
 - [ ] Archive Repository
 
 ## Future Ideas
-- [ ] Save this information to a data frame and create a new csv.
+- Display this information on a web page or on my [portfolio](https://github.com/rheannemcintosh/rheanne_mcintosh_portfolio). 
 
 ## Notes
 - **Language:** Python
@@ -32,7 +35,7 @@ The original application was inspired by a tutorial within the [Zero to Mastery:
 python3 server.py
 ```
 
-<!-- 2. An up-to-date csv should appear in the `news_csvs` folder with todays date -->
+2. An up-to-date csv should appear in the `news_csvs` folder with todays date
 
 <hr>
 
