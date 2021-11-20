@@ -12,12 +12,13 @@ This has now been expanded to get data from 10 pages, saves this information to 
 ## Repository Checklist
 - [x] Upload Code
 - [x] Format Code
-- [x] Update README
 - [x] Update Repository
+- [x] Update README
 - [x] Create Future Ideas
 - [x] Write Application Setup / Commands
-- [ ] Uploaded to Portfolio
-- [ ] Update Wiki
+- [x] <s>Launch Website</s>
+- [ ] Create Card on Portfolio
+- [ ] Create Page on Portfolio
 - [ ] Archive Repository
 
 ## Future Ideas
